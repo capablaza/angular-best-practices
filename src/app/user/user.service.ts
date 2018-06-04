@@ -3,18 +3,18 @@ import { User } from './user';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
+import { environment } from '../../environments/environment';
 
 const httpOptions = {
   headers: new HttpHeaders({
-    'Content-Type': 'application/json',
-    'Authorization': 'my-auth-token'
+    'Content-Type': 'application/json'    
   })
 };
 
 @Injectable()
 export class UserService {
 
-  API_URL = 'http://localhost:3000/user';
+  API_URL = environment.USER_API_URL;
 
   constructor(private httpClient: HttpClient) { }
 
