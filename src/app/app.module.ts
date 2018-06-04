@@ -12,7 +12,7 @@ import { MaterialModule } from './material/material.module';
     AppComponent    
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
     AppRoutingModule,    
     UserModule,
     HttpClientModule,
